@@ -11,7 +11,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 
 load_dotenv()
 GOOGLE_API_KEY = "AIzaSyD2-J-odcMaAX5kV_L73Om4RsnX6o5kVNo"
-ASTRA_DB_APPLICATION_TOKEN = "AstraCS:NsrvnBwFWYxEOcdfskSGsYwR:7ad8f431bcb33dfbfca5495b9415a1bada8302ddd717aeeca9a9c2bc300776f3"
+ASTRA_DB_APPLICATION_TOKEN = "AstraCS:faDOKDjmBLehHYzUESJxgdIo:91d9a875d625fb0f16c50d936bbd9fe3f8cc8e41218adf7b74f9d629a9dbd07f"
 ASTRA_DB_ID = "58603c57-3899-4450-b89a-50a1c8c76602"
 ASTRA_DB_API_ENDPOINT = os.getenv("ASTRA_DB_API_ENDPOINT")
 ASTRA_DB_NAMESPACE = "scriptures"
