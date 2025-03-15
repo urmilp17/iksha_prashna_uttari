@@ -45,7 +45,7 @@ def get_conversational_chain():
     prompt = PromptTemplate(template=prompt_template,
                             input_variables=["context", "question"])
 
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-001", temperature=0.3)
 
     chain = create_stuff_documents_chain(llm, prompt)
 
