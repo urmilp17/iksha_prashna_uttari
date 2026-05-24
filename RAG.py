@@ -10,13 +10,13 @@ from langchain.chains import LLMChain, StuffDocumentsChain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 load_dotenv()
-GOOGLE_API_KEY = "AIzaSyD2-J-odcMaAX5kV_L73Om4RsnX6o5kVNo"
-ASTRA_DB_APPLICATION_TOKEN = "AstraCS:bWWcidaHklrOhifcvpdpHrQz:3b90d8e25c75dec85ede15d7004570eb920c23a44b7499f1b359f520ad89825a"
-ASTRA_DB_ID = "c93eb10d-bdea-4d33-9ad7-9a670676591f"
-ASTRA_DB_API_ENDPOINT = "https://c93eb10d-bdea-4d33-9ad7-9a670676591f-us-east1.apps.astra.datastax.com"
-ASTRA_DB_NAMESPACE = "scriptures"
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+ASTRA_DB_APPLICATION_TOKEN = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
+ASTRA_DB_ID = os.getenv("ASTRA_DB_ID")
+ASTRA_DB_API_ENDPOINT = os.getenv("ASTRA_DB_API_ENDPOINT")
+ASTRA_DB_NAMESPACE = os.getenv("ASTRA_DB_NAMESPACE")
+
+genai.configure(api_key=GOOGLE_API_KEY)
 
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
